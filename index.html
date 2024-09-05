@@ -17,24 +17,47 @@
 </head>
 
 <body>
-<header>
-<form class="weather-form">
-    <input type="search" placeholder="Enter the city..." required class="search-fild">
-    <input type="submit" value="Search" required class="search-fild">
-    </form>
-    </header>
+    <div class="content-wrap">
+        <div class="weather-container">
 
+            <header>
+                <form class="weather-form">
+                    <input type="search" placeholder="Enter the city..." required class="search-field">
+                    <input type="submit" value="Search" required class="search-button">
+                </form>
+            </header>
 
+            <main>
+                <div class="main-wrap">
+                    <div class="weather-city">
+                        <div class="main-info" id="city">San Francisco</div>
+                        <div class="day">Wednesday <span>20:00</span>, clear sky
+                        </div>
+                    </div>
+                    <div class="weather">
+                        <div class="main-info" id="temperature">15°C</div>
+                        <div class="humidity">Humidity: <span>15%</span> </div>
+                        <div class="wind">Wind: <span>5 km/h</span> </div>
+                        <div class="weather-icon">🌞</div>
+                    </div>
+                </div>
+                <div class="weatcher-forecast">
+                    <div>Sat</div>
+                    <div>⚡️</div>
+                    <div>19°C</div>
+                    <div>Lowest <span>15°C</span></div>
+                </div>
+            </main>
 
-    <main>
-
-    </main>
-
-
+        </div>
+    </div>
 
     <footer>
-
+        <div class="footer-text">This project was developed by <span class="highlight"> Zoriana Mykolaichuk</span> is
+            open-sourced on <span class="highlight">GitHub</span> and hosted on <span class="highlight">Netlify</span>.
+        </div>
     </footer>
+
 </body>
 
 </html>
