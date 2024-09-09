@@ -4,7 +4,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background: url('assets/BG/background.jpg');
@@ -15,7 +15,8 @@ body {
 
 .content-wrap {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,19 +29,16 @@ body {
     max-width: 981px;
     width: 80vw;
     flex-direction: column;
-    position: absolute;
-    /* background-color: #b3a1a1; */
-
+    position: relative;
 }
 
 .weather-form {
     display: flex;
     max-width: 720px;
     width: 80vw;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     align-items: center;
     justify-content: center;
-    /* background-color: #fefefe; */
 }
 
 .search-field {
@@ -69,7 +67,7 @@ body {
 }
 
 .search-field:focus {
-    border: 3px solid #bdb1a5;
+    border: 3px solid #e3dfc9;
     color: #C9C9C9;
     font-size: 20px;
 }
@@ -90,23 +88,24 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 900px;
-    width: 80vw;
-    height: 400px;
+    width: 90vw;
+    max-width: 780px;
+    height: 550px;
     margin-bottom: 100px;
 
     padding: 40px;
-    /* isolation: isolate; */
     position: relative;
 }
 
-main::before{
+main::after {
     content: '';
     display: block;
     left: 0;
     top: 0;
     position: absolute;
-    /* z-index: -1;  only when its main::after */ 
+    z-index: -1;  
+    /* only when its main::after */
+    
     width: 100%;
     height: 100%;
     background-color: #ffffff3b;
@@ -116,10 +115,10 @@ main::before{
 
 .main-wrap {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:  20px;
-    
+    flex-direction: column;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+
     background: rgba(232, 228, 207, 0.6);
     border: 3px solid #F6F2DB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -128,6 +127,16 @@ main::before{
 }
 
 .main-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.city {
+    display: flex;
+
     font-family: 'EB Garamond';
     font-style: normal;
     font-weight: 700;
@@ -136,12 +145,123 @@ main::before{
     color: #333333;
 }
 
+.temperature-wrap {
+    display: flex;
+}
 
+.weather-icon {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
 
-.weatcher-forecast {
+.day {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+
+    color: #505050;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temperature {
+    display: flex;
+    padding-top: 6px;
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+
+    color: #803232;
+}
+
+.weather-details {
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    align-items: end;
+    padding-top: 3px;
+
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+
+    color: #505050;
+}
+
+.weather-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+
+    width: 120px;
+    height: 200px;
+
+
+    background: rgba(232, 228, 207, 0.5);
+    border: 3px solid #F6F2DB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    border-radius: 10px;
+
+}
+
+.forecast-d {
+    display: flex;
+
+    font-family: 'Avenir';
+    font-weight: 800;
+    font-size: 20px;
+    color: #262626;
+}
+
+.forecast-i{
+    display: flex;
+    font-size: 40px;
+}
+
+.forecast-t {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    color: #ECECEA;
+}
+
+.lowestT {
+    display: flex;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    /* padding-bottom: 10px; */
+    color: #204052;
+}
+
+.sm{
+    font-family: 'Arial';
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #D7D6D6;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 footer {
@@ -152,8 +272,8 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 10px 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 0;
+    font-family: 'Avenir';
     font-weight: lighter;
     font-size: 15px;
 }
@@ -164,4 +284,5 @@ footer {
 
 .highlight {
     color: #BCA289;
+    text-decoration-line: none;
 }
