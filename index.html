@@ -21,8 +21,8 @@
         <div class="weather-container">
 
             <header>
-                <form class="weather-form">
-                    <input type="search" placeholder="Enter the city..." required class="search-field">
+                <form class="weather-form" id="search-form">
+                    <input type="search" placeholder="Enter the city..." required class="search-field" id="search-form-input">
                     <input type="submit" value="Search" required class="search-button">
                 </form>
             </header>
@@ -30,7 +30,7 @@
             <main>
                 <div class="main-wrap">
                     <div class="main-info">
-                        <div class="city">San Francisco</div>
+                        <h1 class="city" id="city">San Francisco</h1>
                         <div class="temperature-wrap">
                             <div class="weather-icon">🌞</div>
                             <div class="temperature">15°C</div>
